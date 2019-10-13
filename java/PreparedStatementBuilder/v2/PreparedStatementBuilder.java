@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 /**
+ * PreparedStatementBuilder (v2)
+ *
  * @author Antoine James Tournepiche
  * @version 1.0.0
  */
