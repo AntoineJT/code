@@ -10,7 +10,7 @@ import java.sql.Timestamp;
  * PreparedStatementBuilder (v2)
  *
  * @author Antoine James Tournepiche
- * @version 1.0.0
+ * @version 1.0.1
  */
 @SuppressWarnings("unused")
 public class PreparedStatementBuilder {
@@ -45,7 +45,7 @@ public class PreparedStatementBuilder {
      */
     public PreparedStatementBuilder prepareStatement(String sql) throws SQLException {
         PreparedStatementBuilder newInstance = new PreparedStatementBuilder(connection);
-		preparedStatement = newInstance.prepareStatement(sql);
+		preparedStatement = newInstance.connection.prepareStatement(sql);
         newInstance.hasPreparedStatement = true;
         return this;
     }
