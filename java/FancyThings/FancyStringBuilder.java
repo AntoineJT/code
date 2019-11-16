@@ -28,7 +28,6 @@ SOFTWARE.
  * @version 1.0.0
  */
 public class FancyStringBuilder {
-    // TODO javadoc it
     private final StringBuilder stringBuilder;
 
     // -------------
