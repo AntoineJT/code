@@ -37,7 +37,7 @@ import java.util.Locale;
  * An enhanced PrintWriter class
  *
  * @author Antoine James Tournepiche
- * @version 1.0.1
+ * @version 1.0.2
  */
 public class FancyPrintWriter {
     private final PrintWriter printWriter;
@@ -88,6 +88,20 @@ public class FancyPrintWriter {
         printWriter = new PrintWriter(fileName, csn);
     }
 
+    /**
+     * @since 1.0.0
+     */
+    public FancyPrintWriter(Writer out) {
+        printWriter = new PrintWriter(out);
+    }
+
+    /**
+     * @since 1.0.0
+     */
+    public FancyPrintWriter(Writer out, boolean autoFlush) {
+        printWriter = new PrintWriter(out, autoFlush);
+    }
+
     // end of java 8
     // --------------
     // java 10
@@ -103,20 +117,6 @@ public class FancyPrintWriter {
      */
     public FancyPrintWriter(OutputStream out, boolean autoFlush, Charset charset) {
         printWriter = new PrintWriter(out, autoFlush, charset);
-    }
-
-    /**
-     * @since 1.0.0
-     */
-    public FancyPrintWriter(Writer out) {
-        printWriter = new PrintWriter(out);
-    }
-
-    /**
-     * @since 1.0.0
-     */
-    public FancyPrintWriter(Writer out, boolean autoFlush) {
-        printWriter = new PrintWriter(out, autoFlush);
     }
 
     /**
