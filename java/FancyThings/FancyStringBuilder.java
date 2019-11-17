@@ -25,7 +25,7 @@
 
 /**
  * @author Antoine James Tournepiche
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class FancyStringBuilder {
     private final StringBuilder stringBuilder;
@@ -115,16 +115,6 @@ public class FancyStringBuilder {
         stringBuilder.append(b);
         return this;
     }
-
-    /**
-     * @since 1.0.0
-     */
-    /*
-    public FancyStringBuilder append(char[] str) {
-        stringBuilder.append(str);
-        return this;
-    }
-    */
 
     /**
      * @since 1.0.0
@@ -277,16 +267,6 @@ public class FancyStringBuilder {
         stringBuilder.insert(offset, c);
         return this;
     }
-
-    /**
-     * @since 1.0.0
-     */
-    /*
-    public FancyStringBuilder insert(int offset, char[] str) {
-        stringBuilder.insert(offset, str);
-        return this;
-    }
-     */
 
     /**
      * @since 1.0.0
@@ -462,9 +442,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(int... integers) {
-        for (int i : integers) {
-            stringBuilder.append(i);
-        }
+        for (int i : integers) stringBuilder.append(i);
         return this;
     }
 
@@ -473,9 +451,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(char... chars) {
-        for (char c : chars) {
-            stringBuilder.append(c);
-        }
+        for (char c : chars) stringBuilder.append(c);
         return this;
     }
 
@@ -483,9 +459,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(float... floats) {
-        for (float f : floats) {
-            stringBuilder.append(f);
-        }
+        for (float f : floats) stringBuilder.append(f);
         return this;
     }
 
@@ -493,9 +467,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(double... doubles) {
-        for (double d : doubles) {
-            stringBuilder.append(d);
-        }
+        for (double d : doubles) stringBuilder.append(d);
         return this;
     }
 
@@ -503,9 +475,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(long... longs) {
-        for (long l : longs) {
-            stringBuilder.append(l);
-        }
+        for (long l : longs) stringBuilder.append(l);
         return this;
     }
 
@@ -513,9 +483,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(boolean... booleans) {
-        for (boolean b : booleans) {
-            stringBuilder.append(b);
-        }
+        for (boolean b : booleans) stringBuilder.append(b);
         return this;
     }
 
@@ -523,9 +491,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(String... strings) {
-        for (String str : strings) {
-            stringBuilder.append(str);
-        }
+        for (String str : strings) stringBuilder.append(str);
         return this;
     }
 
@@ -533,9 +499,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(Object... objs) {
-        for (Object obj : objs) {
-            stringBuilder.append(obj);
-        }
+        for (Object obj : objs) stringBuilder.append(obj);
         return this;
     }
 
@@ -543,9 +507,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(CharSequence... charSequences) {
-        for(CharSequence charSequence : charSequences) {
-            stringBuilder.append(charSequence);
-        }
+        for(CharSequence charSequence : charSequences) stringBuilder.append(charSequence);
         return this;
     }
 
@@ -553,9 +515,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder append(StringBuffer... stringBuffers) {
-        for (StringBuffer stringBuffer : stringBuffers) {
-            stringBuilder.append(stringBuffer);
-        }
+        for (StringBuffer stringBuffer : stringBuffers) stringBuilder.append(stringBuffer);
         return this;
     }
 
@@ -563,20 +523,17 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int offset, boolean... booleans) {
-        for (boolean b : booleans) {
-            stringBuilder.insert(offset, b);
-        }
+        for (boolean b : booleans) stringBuilder.insert(offset, b);
         return this;
     }
 
     /**
      * replaces the int, char[] implementation
+     *
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int offset, char... chars) {
-        for (char c : chars) {
-            stringBuilder.insert(offset, c);
-        }
+        for (char c : chars) stringBuilder.insert(offset, c);
         return this;
     }
 
@@ -584,9 +541,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int dstOffset, CharSequence... charSequences) {
-        for (CharSequence charSequence : charSequences) {
-            stringBuilder.insert(dstOffset, charSequence);
-        }
+        for (CharSequence charSequence : charSequences) stringBuilder.insert(dstOffset, charSequence);
         return this;
     }
 
@@ -594,9 +549,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int offset, double... doubles) {
-        for (double d : doubles) {
-            stringBuilder.insert(offset, d);
-        }
+        for (double d : doubles) stringBuilder.insert(offset, d);
         return this;
     }
 
@@ -604,9 +557,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int offset, float... floats) {
-        for (float f : floats) {
-            stringBuilder.insert(offset, f);
-        }
+        for (float f : floats) stringBuilder.insert(offset, f);
         return this;
     }
 
@@ -614,9 +565,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int offset, int... integers) {
-        for (int i : integers) {
-            stringBuilder.insert(offset, i);
-        }
+        for (int i : integers) stringBuilder.insert(offset, i);
         return this;
     }
 
@@ -624,9 +573,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int offset, long... longs) {
-        for (long l : longs) {
-            stringBuilder.insert(offset, l);
-        }
+        for (long l : longs) stringBuilder.insert(offset, l);
         return this;
     }
 
@@ -634,9 +581,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int offset, Object... objs) {
-        for (Object obj : objs) {
-            stringBuilder.insert(offset, obj);
-        }
+        for (Object obj : objs) stringBuilder.insert(offset, obj);
         return this;
     }
 
@@ -644,9 +589,7 @@ public class FancyStringBuilder {
      * @since 1.0.0
      */
     public FancyStringBuilder insert(int offset, String... strings) {
-        for (String str : strings) {
-            stringBuilder.insert(offset, str);
-        }
+        for (String str : strings) stringBuilder.insert(offset, str);
         return this;
     }
 }

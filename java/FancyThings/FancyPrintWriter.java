@@ -37,7 +37,7 @@ import java.util.Locale;
  * An enhanced PrintWriter class
  *
  * @author Antoine James Tournepiche
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class FancyPrintWriter {
     private final PrintWriter printWriter;
@@ -221,15 +221,6 @@ public class FancyPrintWriter {
     /**
      * @since 1.0.0
      */
-    /*
-    public void print(char[] str) {
-        printWriter.print(str);
-    }
-     */
-
-    /**
-     * @since 1.0.0
-     */
     public void print(double d) {
         printWriter.print(d);
     }
@@ -342,15 +333,6 @@ public class FancyPrintWriter {
     /**
      * @since 1.0.0
      */
-    /*
-    public void write(char[] buf) {
-        printWriter.write(buf);
-    }
-     */
-
-    /**
-     * @since 1.0.0
-     */
     public void write(char[] buf, int off, int len) {
         printWriter.write(buf, off, len);
     }
@@ -391,9 +373,7 @@ public class FancyPrintWriter {
      * @since 1.0.0
      */
     public FancyPrintWriter append(char... chars) {
-        for (char c : chars) {
-            printWriter.append(c);
-        }
+        for (char c : chars) printWriter.append(c);
         return this;
     }
 
@@ -401,9 +381,7 @@ public class FancyPrintWriter {
      * @since 1.0.0
      */
     public FancyPrintWriter append(CharSequence... charSequences) {
-        for (CharSequence charSequence : charSequences) {
-            printWriter.append(charSequence);
-        }
+        for (CharSequence charSequence : charSequences) printWriter.append(charSequence);
         return this;
     }
 
@@ -411,9 +389,7 @@ public class FancyPrintWriter {
      * @since 1.0.0
      */
     public void print(boolean... booleans) {
-        for (boolean b : booleans) {
-            printWriter.print(b);
-        }
+        for (boolean b : booleans) printWriter.print(b);
     }
 
     /**
@@ -422,63 +398,49 @@ public class FancyPrintWriter {
      * @since 1.0.0
      */
     public void print(char... chars) {
-        for (char c : chars) {
-            printWriter.print(c);
-        }
+        for (char c : chars) printWriter.print(c);
     }
 
     /**
      * @since 1.0.0
      */
     public void print(double... doubles) {
-        for (double d : doubles) {
-            printWriter.print(d);
-        }
+        for (double d : doubles) printWriter.print(d);
     }
 
     /**
      * @since 1.0.0
      */
     public void print(float... floats) {
-        for (float f : floats) {
-            printWriter.print(f);
-        }
+        for (float f : floats) printWriter.print(f);
     }
 
     /**
      * @since 1.0.0
      */
     public void print(int... integers) {
-        for (int i : integers) {
-            printWriter.print(i);
-        }
+        for (int i : integers) printWriter.print(i);
     }
 
     /**
      * @since 1.0.0
      */
     public void print(long... longs) {
-        for (long l : longs) {
-            printWriter.print(l);
-        }
+        for (long l : longs) printWriter.print(l);
     }
 
     /**
      * @since 1.0.0
      */
     public void print(String... strings) {
-        for (String str : strings) {
-            printWriter.print(str);
-        }
+        for (String str : strings) printWriter.print(str);
     }
 
     /**
      * @since 1.0.0
      */
     public void println(boolean... booleans) {
-        for (boolean b : booleans) {
-            printWriter.println(b);
-        }
+        for (boolean b : booleans) printWriter.println(b);
     }
 
     /**
@@ -487,63 +449,49 @@ public class FancyPrintWriter {
      * @since 1.0.0
      */
     public void println(char... chars) {
-        for (char c : chars) {
-            printWriter.println(c);
-        }
+        for (char c : chars) printWriter.println(c);
     }
 
     /**
      * @since 1.0.0
      */
     public void println(double... doubles) {
-        for (double d : doubles) {
-            printWriter.println(d);
-        }
+        for (double d : doubles) printWriter.println(d);
     }
 
     /**
      * @since 1.0.0
      */
     public void println(float... floats) {
-        for (float f : floats) {
-            printWriter.println(f);
-        }
+        for (float f : floats) printWriter.println(f);
     }
 
     /**
      * @since 1.0.0
      */
     public void println(int... integers) {
-        for (int i : integers) {
-            printWriter.println(i);
-        }
+        for (int i : integers) printWriter.println(i);
     }
 
     /**
      * @since 1.0.0
      */
     public void println(long... longs) {
-        for (long l : longs) {
-            printWriter.println(l);
-        }
+        for (long l : longs) printWriter.println(l);
     }
 
     /**
      * @since 1.0.0
      */
     public void println(Object... objs) {
-        for (Object obj : objs) {
-            printWriter.println(obj);
-        }
+        for (Object obj : objs) printWriter.println(obj);
     }
 
     /**
      * @since 1.0.0
      */
     public void println(String... strings) {
-        for (String str : strings) {
-            printWriter.println(str);
-        }
+        for (String str : strings) printWriter.println(str);
     }
 
     /**
@@ -559,18 +507,14 @@ public class FancyPrintWriter {
      * @since 1.0.0
      */
     public void write(int... chars) {
-        for (int c : chars) {
-            printWriter.write(c);
-        }
+        for (int c : chars) printWriter.write(c);
     }
 
     /**
      * @since 1.0.0
      */
     public void write(String... strings) {
-        for (String str : strings) {
-            printWriter.write(str);
-        }
+        for (String str : strings) printWriter.write(str);
     }
 
     // end of new fancy things
