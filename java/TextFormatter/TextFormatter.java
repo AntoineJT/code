@@ -2,9 +2,7 @@
  * MIT License
  *
  * Copyright (c) 2019 Antoine James Tournepiche
- *
- * This source file come from Just another Stack Calculator
- * Repository : https://github.com/AntoineJT/jasc
+ * Repository : https://github.com/AntoineJT/code
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
