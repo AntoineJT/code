@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # MIT License
 #
 # Copyright (c) 2019 Antoine James Tournepiche
@@ -21,7 +23,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-#!/bin/bash
 usage()
 {
 	echo "Usage: $0 {start|stop|logs}"

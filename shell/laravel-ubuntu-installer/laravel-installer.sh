@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # MIT License
 #
 # Copyright (c) 2019 Antoine James Tournepiche
