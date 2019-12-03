@@ -70,8 +70,21 @@ BRANCHES=(
 # done < branches
 
 BRANCH=$1
+ACTION=$2
 if [[ -z $BRANCH ]]; then
-	echo "Usage: $0 <branch name>"
+	echo "Usage: $0 <branch name> [pull/rebase]"
+	echo 'When only branch name is specified, the default action is to pull --rebase (pull)'
+	exit
+fi
+
+TYPE=0 # action: pull
+if [[ -z $ACTION ]]; then
+	echo 'Info: Default action selected : pull --rebase (pull)'
+elif [[ $ACTION == 'rebase' ]]; then
+	echo 'Info: Rebase action selected'
+	TYPE=1 # action: rebase
+elif [[ $ACTION != 'pull' ]]; then
+	echo 'Error: The specified action is invalid!'
 	exit
 fi
 
@@ -87,11 +100,20 @@ echo "Be sure that all other branches are under '$BRANCH' before to continue!"
 echo 'First forward all branches?'
 pause 'Press a key to confirm and go along or CTRL^C to exit '
 
-for CURRENT_BRANCH in ${BRANCHES[@]}
-do
-	git checkout $CURRENT_BRANCH
-	git rebase -f $BRANCH
-	git push
-done
+if [[ $TYPE -eq 0 ]]; then
+	for CURRENT_BRANCH in ${BRANCHES[@]}
+	do
+		git checkout $CURRENT_BRANCH
+		git pull --rebase -f origin $BRANCH
+		git push
+	done
+elif [[ $TYPE -eq 1 ]]; then
+	for CURRENT_BRANCH in ${BRANCHES[@]}
+	do
+		git checkout $CURRENT_BRANCH
+		git rebase -f $BRANCH
+		git push
+	done
+fi
 
 git checkout $BRANCH
